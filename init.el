@@ -43,6 +43,7 @@
 (load-theme 'misterioso t)
 
 
+(prefer-coding-system 'utf-8)
 (setq system-time-locale "C")
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq-default indent-tabs-mode nil)
