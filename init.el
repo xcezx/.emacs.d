@@ -27,6 +27,7 @@
  'php-eldoc
  'php-mode
  'popwin
+ 'web-mode
  'yaml-mode
  )
 
