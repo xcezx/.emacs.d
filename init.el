@@ -16,6 +16,7 @@
  'emmet-mode
  'flycheck
  'flycheck-color-mode-line
+ 'go-mode
  'helm
  'helm-gtags
  'magit
