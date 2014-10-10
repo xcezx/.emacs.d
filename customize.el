@@ -45,7 +45,8 @@
  '(sgml-mode-hook (quote (emmet-mode)))
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(split-width-threshold nil))
+ '(split-width-threshold nil)
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
