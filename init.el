@@ -125,6 +125,9 @@
 (when (require 'wdired nil t)
   (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode))
 
+;; for ruby-mode
+(add-to-list 'auto-mode-alist `(,(rx (or "Gem" "Vagrant" "Berks" "Rake" "Cap") "file" buffer-end) . ruby-mode))
+
 
 (ac-config-default)
 

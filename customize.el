@@ -39,6 +39,7 @@
  '(php-mode-warn-if-mumamo-off nil)
  '(read-buffer-completion-ignore-case t)
  '(recentf-mode t)
+ '(ruby-deep-indent-paren-style nil)
  '(safe-local-variable-values (quote ((py-indent-offset . 4))))
  '(scroll-bar-mode nil)
  '(sgml-basic-offset 4)
