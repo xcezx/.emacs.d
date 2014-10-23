@@ -1,3 +1,5 @@
+(require 'cl)
+
 ;; Package
 (setq package-user-dir (locate-user-emacs-file "vendor")
       package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
