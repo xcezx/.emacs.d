@@ -43,12 +43,6 @@
     ((php-mode "<\\?php\\|<\\?=" "\\?>")
      (js-mode "<script[^>]*>" "</script>")
      (css-mode "<style[^>]*>" "</style>"))))
- '(package-archives
-   (quote
-    (("gnu" . "http://elpa.gnu.org/packages/")
-     ("marmalade" . "http://marmalade-repo.org/packages/")
-     ("melpa" . "http://melpa.milkbox.net/packages/"))))
- '(package-user-dir "~/.emacs.d/vendor")
  '(php-mode-coding-style (quote psr2))
  '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode)))
  '(php-mode-warn-if-mumamo-off nil)
