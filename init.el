@@ -150,5 +150,8 @@
         popwin:special-display-config))
 (define-key global-map (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
 
+(add-hook 'php-mode-hook
+          '(lambda () (remove-hook 'before-save-hook 'delete-trailing-whitespace)))
+
 
 ;;; init.el ends here
