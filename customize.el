@@ -28,7 +28,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
- '(js-indent-level 4)
+ '(js-indent-level 2)
  '(kill-do-not-save-duplicates t)
  '(kill-whole-line t)
  '(make-backup-files nil)
@@ -43,7 +43,13 @@
      (js-mode "<script[^>]*>" "</script>")
      (css-mode "<style[^>]*>" "</style>"))))
  '(php-mode-coding-style (quote psr2))
- '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode)) t)
+ '(php-mode-hook
+   (quote
+    ((lambda nil
+       (remove-hook
+        (quote before-save-hook)
+        (quote delete-trailing-whitespace)))
+     helm-gtags-mode hs-minor-mode)))
  '(read-buffer-completion-ignore-case t)
  '(recentf-mode t)
  '(ruby-deep-indent-paren-style nil)
