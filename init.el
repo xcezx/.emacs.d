@@ -21,6 +21,7 @@
  'go-mode
  'helm
  'helm-gtags
+ 'js2-mode
  'magit
  'markdown-mode
  'multi-web-mode
@@ -149,6 +150,9 @@
   (push '(direx:direx-mode :position left :width 50 :dedicated t)
         popwin:special-display-config))
 (define-key global-map (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
+
+(when (require 'js2-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
 
 
 ;;; init.el ends here

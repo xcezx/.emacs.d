@@ -29,6 +29,7 @@
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
  '(js-indent-level 2)
+ '(js2-init-hook (quote (hs-minor-mode)))
  '(kill-do-not-save-duplicates t)
  '(kill-whole-line t)
  '(make-backup-files nil)
