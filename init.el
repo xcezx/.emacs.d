@@ -14,6 +14,7 @@
  'auto-save-buffers-enhanced
  'bm
  'direx
+ 'dockerfile-mode
  'e2wm
  'emmet-mode
  'flycheck
