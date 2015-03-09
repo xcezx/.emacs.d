@@ -44,13 +44,7 @@
      (js-mode "<script[^>]*>" "</script>")
      (css-mode "<style[^>]*>" "</style>"))))
  '(php-mode-coding-style (quote psr2))
- '(php-mode-hook
-   (quote
-    ((lambda nil
-       (remove-hook
-        (quote before-save-hook)
-        (quote delete-trailing-whitespace)))
-     helm-gtags-mode hs-minor-mode)))
+ '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode)))
  '(read-buffer-completion-ignore-case t)
  '(recentf-mode t)
  '(ruby-deep-indent-paren-style nil)

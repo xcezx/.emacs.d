@@ -155,5 +155,15 @@
 (when (require 'js2-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
 
+;;; @FIXME
+(add-hook 'makefile-mode-hook
+          (function (lambda ()
+                      (fset 'makefile-warn-suspicious-lines 'ignore))))
+
+(defun xcezx/php-enable-psr2-coding-style (f &rest args)
+  (apply f args)
+  (remove-hook 'before-save-hook 'delete-trailing-whitespace t))
+(advice-add 'php-enable-psr2-coding-style :around #'xcezx/php-enable-psr2-coding-style)
+
 
 ;;; init.el ends here
