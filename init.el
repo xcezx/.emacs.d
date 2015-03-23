@@ -32,6 +32,7 @@
  'php-eldoc
  'php-mode
  'popwin
+ 'scss-mode
  'yaml-mode
  )
 
