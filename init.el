@@ -10,6 +10,7 @@
   (package-refresh-contents)
   (package-install 'package+))
 (package-manifest
+ 'ace-jump-mode
  'auto-complete
  'auto-save-buffers-enhanced
  'bm
@@ -102,6 +103,7 @@
 (define-key global-map (kbd "C-x C-b") 'electric-buffer-list)
 (define-key global-map (kbd "C-x C-d") 'dired-jump-other-window)
 (define-key global-map (kbd "C-x p") (lambda () (interactive) (other-window -1)))
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)
 
 (defadvice move-beginning-of-line (around adviced-beginning-of-line (arg) activate)
