@@ -7,6 +7,7 @@
  '(after-save-hook
    (quote
     (executable-make-buffer-file-executable-if-script-p)))
+ '(coffee-tab-width 2)
  '(column-number-mode t)
  '(custom-safe-themes
    (quote

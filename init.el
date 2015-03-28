@@ -14,6 +14,7 @@
  'auto-complete
  'auto-save-buffers-enhanced
  'bm
+ 'coffee-mode
  'direx
  'dockerfile-mode
  'e2wm
