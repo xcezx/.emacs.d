@@ -16,6 +16,7 @@
  'bm
  'coffee-mode
  'direx
+ 'coffee-mode
  'dockerfile-mode
  'e2wm
  'emmet-mode
