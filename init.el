@@ -15,6 +15,7 @@
  'auto-save-buffers-enhanced
  'bm
  'direx
+ 'coffee-mode
  'dockerfile-mode
  'e2wm
  'emmet-mode
