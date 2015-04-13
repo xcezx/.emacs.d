@@ -15,6 +15,7 @@
  'auto-complete
  'auto-save-buffers-enhanced
  'bm
+ 'coffee-mode
  'direx
  'coffee-mode
  'crontab-mode
