@@ -164,6 +164,8 @@
 (when (require 'js2-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
 
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 ;;; @FIXME
 (add-hook 'makefile-mode-hook
           (function (lambda ()
