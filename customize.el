@@ -33,6 +33,7 @@
  '(js2-init-hook (quote (hs-minor-mode)))
  '(kill-do-not-save-duplicates t)
  '(kill-whole-line t)
+ '(magit-auto-revert-mode nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(multi-web-global-mode t nil (multi-web-mode))
