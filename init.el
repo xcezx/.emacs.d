@@ -50,9 +50,6 @@
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
 
-;; Theme
-(load-theme 'misterioso t)
-
 
 (prefer-coding-system 'utf-8)
 (setq system-time-locale "C")
