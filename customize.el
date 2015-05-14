@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-delay 0.3)
+ '(ad-redefinition-action (quote accept))
  '(after-save-hook
    (quote
     (executable-make-buffer-file-executable-if-script-p)))
