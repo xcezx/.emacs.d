@@ -3,8 +3,8 @@
 ;; Package
 (setq package-user-dir (locate-user-emacs-file "vendor")
       package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 (unless (package-installed-p 'package+)
   (package-refresh-contents)
