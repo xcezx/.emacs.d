@@ -25,6 +25,7 @@
  'flycheck
  'flycheck-color-mode-line
  'go-mode
+ 'groovy-mode
  'helm
  'helm-gtags
  'js2-mode
