@@ -49,6 +49,8 @@
      (css-mode "<style[^>]*>" "</style>"))))
  '(php-mode-coding-style (quote psr2))
  '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode)))
+ '(projectile-completion-system (quote helm))
+ '(projectile-global-mode t)
  '(read-buffer-completion-ignore-case t)
  '(recentf-mode t)
  '(ruby-deep-indent-paren-style nil)

@@ -28,6 +28,7 @@
  'groovy-mode
  'helm
  'helm-gtags
+ 'helm-projectile
  'js2-mode
  'json-mode
  'magit
