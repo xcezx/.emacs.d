@@ -29,6 +29,7 @@
  'helm
  'helm-gtags
  'helm-projectile
+ 'helm-swoop
  'js2-mode
  'json-mode
  'magit
