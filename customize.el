@@ -62,6 +62,8 @@
  '(show-trailing-whitespace t)
  '(size-indication-mode t)
  '(split-width-threshold nil)
+ '(tumblesocks-blog "xcezx-log.tumblr.com")
+ '(tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token")
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

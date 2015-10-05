@@ -41,6 +41,7 @@
  'php-mode
  'popwin
  'scss-mode
+ 'tumblesocks
  'yaml-mode
  )
 
@@ -173,6 +174,10 @@
   (apply f args)
   (remove-hook 'before-save-hook 'delete-trailing-whitespace t))
 (advice-add 'php-enable-psr2-coding-style :around #'xcezx/php-enable-psr2-coding-style)
+
+;;; for tumblesocks
+(when (require 'tumblesocks nil t)
+  (setq oauth-nonce-function 'oauth-internal-make-nonce))
 
 
 ;;; init.el ends here
