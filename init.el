@@ -16,9 +16,9 @@
  'auto-save-buffers-enhanced
  'bm
  'coffee-mode
- 'direx
  'coffee-mode
  'crontab-mode
+ 'direx
  'dockerfile-mode
  'e2wm
  'emmet-mode
@@ -42,6 +42,7 @@
  'popwin
  'scss-mode
  'tumblesocks
+ 'web-mode
  'yaml-mode
  )
 
