@@ -23,6 +23,9 @@
  '(electric-pair-mode t)
  '(electric-pair-pairs (quote ((34 . 34))))
  '(emacs-lisp-mode-hook (quote (hs-minor-mode turn-on-eldoc-mode)))
+ '(flycheck-mode-hook
+   (quote
+    (flycheck-mode-set-explicitly flycheck-color-mode-line-mode)))
  '(global-auto-revert-mode t)
  '(helm-buffer-max-length 64)
  '(history-delete-duplicates t)
@@ -48,7 +51,7 @@
      (js-mode "<script[^>]*>" "</script>")
      (css-mode "<style[^>]*>" "</style>"))))
  '(php-mode-coding-style (quote psr2))
- '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode)))
+ '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode flycheck-mode)))
  '(projectile-completion-system (quote helm))
  '(projectile-global-mode t)
  '(read-buffer-completion-ignore-case t)
@@ -74,7 +77,7 @@
  '(bm-face ((t (:background "green" :foreground "black"))))
  '(diff-added ((t (:inherit diff-changed :background "brightblack" :foreground "green"))))
  '(diff-removed ((t (:background "brightblack" :foreground "red"))))
- '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "red" :foreground "yellow" :weight normal))) t)
+ '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "red" :foreground "yellow" :weight normal))))
  '(helm-selection ((t (:background "brightred" :underline t))))
  '(magit-diff-added-highlight ((t (:inherit diff-added))))
  '(magit-diff-removed-highlight ((t (:inherit diff-removed))))
