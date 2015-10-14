@@ -72,6 +72,8 @@
  ;; If there is more than one, they won't work right.
  '(ace-jump-face-background ((t (:foreground "brightcyan"))))
  '(bm-face ((t (:background "green" :foreground "black"))))
+ '(diff-added ((t (:inherit diff-changed :background "brightblack" :foreground "green"))))
+ '(diff-removed ((t (:background "brightblack" :foreground "red"))))
  '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "red" :foreground "yellow" :weight normal))) t)
  '(helm-selection ((t (:background "brightred" :underline t))))
  '(mode-line ((t (:background "#212931" :foreground "black" :box (:line-width -1 :style released-button))))))
