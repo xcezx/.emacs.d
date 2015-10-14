@@ -76,4 +76,6 @@
  '(diff-removed ((t (:background "brightblack" :foreground "red"))))
  '(flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "red" :foreground "yellow" :weight normal))) t)
  '(helm-selection ((t (:background "brightred" :underline t))))
+ '(magit-diff-added-highlight ((t (:inherit diff-added))))
+ '(magit-diff-removed-highlight ((t (:inherit diff-removed))))
  '(mode-line ((t (:background "#212931" :foreground "black" :box (:line-width -1 :style released-button))))))
