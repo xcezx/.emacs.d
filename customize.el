@@ -66,6 +66,7 @@
  '(size-indication-mode t)
  '(split-width-threshold nil)
  '(tumblesocks-blog "xcezx-log.tumblr.com")
+ '(tumblesocks-post-default-state "ask")
  '(tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token")
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
