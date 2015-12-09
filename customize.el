@@ -23,6 +23,7 @@
  '(electric-pair-mode t)
  '(electric-pair-pairs (quote ((34 . 34))))
  '(emacs-lisp-mode-hook (quote (hs-minor-mode turn-on-eldoc-mode)))
+ '(flycheck-emacs-lisp-load-path (quote inherit))
  '(flycheck-mode-hook
    (quote
     (flycheck-mode-set-explicitly flycheck-color-mode-line-mode)))
