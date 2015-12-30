@@ -26,6 +26,7 @@
  'flycheck-color-mode-line
  'go-mode
  'groovy-mode
+ 'hcl-mode
  'helm
  'helm-gtags
  'helm-projectile
