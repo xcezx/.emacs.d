@@ -23,6 +23,7 @@
  '(electric-pair-mode t)
  '(electric-pair-pairs (quote ((34 . 34))))
  '(emacs-lisp-mode-hook (quote (hs-minor-mode turn-on-eldoc-mode)))
+ '(flycheck-emacs-lisp-load-path (quote inherit))
  '(flycheck-mode-hook
    (quote
     (flycheck-mode-set-explicitly flycheck-color-mode-line-mode)))
@@ -82,4 +83,4 @@
  '(helm-selection ((t (:background "brightred" :underline t))))
  '(magit-diff-added-highlight ((t (:inherit diff-added))))
  '(magit-diff-removed-highlight ((t (:inherit diff-removed))))
- '(mode-line ((t (:background "#212931" :foreground "black" :box (:line-width -1 :style released-button))))))
+ '(mode-line ((t (:background "cyan" :foreground "green")))))
