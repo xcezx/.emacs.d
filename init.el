@@ -26,6 +26,7 @@
  'flycheck-color-mode-line
  'go-mode
  'groovy-mode
+ 'hcl-mode
  'helm
  'helm-gtags
  'helm-projectile
@@ -40,6 +41,7 @@
  'php-eldoc
  'php-mode
  'popwin
+ 'protobuf-mode
  'scss-mode
  'tumblesocks
  'web-mode
