@@ -23,6 +23,7 @@
  'e2wm
  'emmet-mode
  'flycheck
+ 'flycheck-package
  'flycheck-color-mode-line
  'go-mode
  'groovy-mode
