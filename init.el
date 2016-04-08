@@ -47,6 +47,7 @@
  'scss-mode
  'tumblesocks
  'web-mode
+ 'yagist
  'yaml-mode
  )
 

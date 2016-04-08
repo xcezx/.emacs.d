@@ -28,6 +28,7 @@
    (quote
     (flycheck-mode-set-explicitly flycheck-color-mode-line-mode)))
  '(global-auto-revert-mode t)
+ '(go-mode-hook (quote (hs-minor-mode)))
  '(helm-buffer-max-length 64)
  '(history-delete-duplicates t)
  '(hs-minor-mode-hook (quote (xcezx/hs-config)))
@@ -35,7 +36,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
- '(js-indent-level 2)
+ '(js-indent-level 4)
  '(js2-init-hook (quote (hs-minor-mode)))
  '(kill-do-not-save-duplicates t)
  '(kill-whole-line t)
