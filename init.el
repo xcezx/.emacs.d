@@ -45,6 +45,7 @@
  'popwin
  'protobuf-mode
  'scss-mode
+ 'theme-darktooth
  'tumblesocks
  'web-mode
  'yagist

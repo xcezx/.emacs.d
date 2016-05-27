@@ -8,9 +8,11 @@
  '(after-save-hook
    (quote
     (executable-make-buffer-file-executable-if-script-p)))
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(coffee-tab-width 2)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (misterioso)))
+ '(custom-enabled-themes (quote (wombat)))
  '(custom-safe-themes
    (quote
     ("a507b9ca4a605d5256716da70961741b9ef9ec3246041a4eb776102e8df18418" default)))
