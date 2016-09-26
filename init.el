@@ -14,7 +14,6 @@
  'ace-window
  'auto-complete
  'auto-save-buffers-enhanced
- 'blockdiag-mode
  'bm
  'coffee-mode
  'coffee-mode
