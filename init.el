@@ -18,65 +18,49 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(setq use-package-always-ensure t)
 
 (use-package ace-jump-mode
-  :bind (("C-c SPC" . ace-jump-mode))
-  :ensure t)
+  :bind (("C-c SPC" . ace-jump-mode)))
 
 (use-package ace-window
-  :bind (("M-p" . ace-window))
-  :ensure t)
+  :bind (("M-p" . ace-window)))
 
 (use-package auto-complete
-  :init (ac-config-default)
-  :ensure t)
+  :init (ac-config-default))
 
 (use-package auto-save-buffers-enhanced
-  :init (auto-save-buffers-enhanced t)
-  :ensure t)
+  :init (auto-save-buffers-enhanced t))
 
 (use-package bm
   :bind (("M-1" . bm-toggle)
          ("M-2" . bm-previous)
-         ("M-3" . bm-next))
-  :ensure t)
+         ("M-3" . bm-next)))
 
-(use-package coffee-mode
-  :ensure t)
+(use-package coffee-mode)
 
-(use-package crontab-mode
-  :ensure t)
+(use-package crontab-mode)
 
 (use-package direx
-  :bind (("C-x C-j" . direx:jump-to-directory-other-window))
-  :ensure t)
+  :bind (("C-x C-j" . direx:jump-to-directory-other-window)))
 
-(use-package dockerfile-mode
-  :ensure t)
+(use-package dockerfile-mode)
 
-(use-package e2wm
-  :ensure t)
+(use-package e2wm)
 
-(use-package emmet-mode
-  :ensure t)
+(use-package emmet-mode)
 
-(use-package flycheck
-  :ensure t)
+(use-package flycheck)
 
-(use-package flycheck-package
-  :ensure t)
+(use-package flycheck-package)
 
-(use-package flycheck-color-mode-line
-  :ensure t)
+(use-package flycheck-color-mode-line)
 
-(use-package go-mode
-  :ensure t)
+(use-package go-mode)
 
-;; (use-package groovy-mode
-;;   :ensure t)
+;; (use-package groovy-mode)
 
-;; (use-package hcl-mode
-;;   :ensure t)
+;; (use-package hcl-mode)
 
 (use-package helm
   :init (helm-mode 1)
@@ -84,67 +68,49 @@
          ("C-x C-f" . helm-find-files)
          ("C-s" . helm-occur)
          ("C-x ;" . helm-mini)
-         ("C-x b" . helm-buffers-list))
-  :ensure t)
+         ("C-x b" . helm-buffers-list)))
 
 (use-package helm-gtags
-  :ensure t)
+  :bind (:map helm-gtags-mode-map ("C-x g" . helm-gtags-select)))
 
-(use-package helm-projectile
-  :ensure t)
+(use-package helm-projectile)
 
-(use-package helm-swoop
-  :ensure t)
+(use-package helm-swoop)
 
 (use-package js2-mode
-  :mode "\\.js\\'"
-  :ensure t)
+  :mode "\\.js\\'")
 
-(use-package json-mode
-  :ensure t)
+(use-package json-mode)
 
-(use-package magit
-  :ensure t)
+(use-package magit)
 
-(use-package markdown-mode
-  :ensure t)
+(use-package markdown-mode)
 
-(use-package multi-web-mode
-  :ensure t)
+(use-package multi-web-mode)
 
-(use-package org
-  :ensure t)
+(use-package org)
 
-(use-package php-eldoc
-  :ensure t)
+(use-package php-eldoc)
 
-(use-package php-mode
-  :ensure t)
+(use-package php-mode)
 
 (use-package popwin
-  :init (popwin-mode 1)
+  :config (popwin-mode 1)
   (push '(direx:direx-mode :position left :width 50 :dedicated t)
-        popwin:special-display-config)
-  :ensure t)
+        popwin:special-display-config))
 
-(use-package protobuf-mode
-  :ensure t)
+(use-package protobuf-mode)
 
-(use-package scss-mode
-  :ensure t)
+(use-package scss-mode)
 
 (use-package tumblesocks
-  :init (setq oauth-nonce-function 'oauth-internal-make-nonce)
-  :ensure t)
+  :init (setq oauth-nonce-function 'oauth-internal-make-nonce))
 
-(use-package web-mode
-  :ensure t)
+(use-package web-mode)
 
-(use-package yagist
-  :ensure t)
+(use-package yagist)
 
-(use-package yaml-mode
-  :ensure t)
+(use-package yaml-mode)
 
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
@@ -228,10 +194,6 @@
 
 (when (require 'wdired nil t)
   (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode))
-
-;; (defun xcezx/helm-gtags-mode-hook ()
-;;   (define-key helm-gtags-mode-map (kbd "C-x g") 'helm-gtags-select))
-;; (add-hook 'helm-gtags-mode-hook 'xcezx/helm-gtags-mode-hook)
 
 ;;; @FIXME
 (add-hook 'makefile-mode-hook
