@@ -1,4 +1,12 @@
-(require 'cl)
+(defalias 'yes-or-no-p 'y-or-n-p)
+(prefer-coding-system 'utf-8)
+(setq system-time-locale "C")
+(setq text-quoting-style 'grave)
+(setq-default indent-tabs-mode nil)
+
+;; Server
+(when (require 'server nil t)
+  (unless (server-running-p) (server-start)))
 
 ;; Package
 (setq package-user-dir (locate-user-emacs-file "vendor")
@@ -6,67 +14,145 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
-(unless (package-installed-p 'package+)
-  (package-refresh-contents)
-  (package-install 'package+))
-(package-manifest
- 'ace-jump-mode
- 'ace-window
- 'auto-complete
- 'auto-save-buffers-enhanced
- 'bm
- 'coffee-mode
- 'coffee-mode
- 'crontab-mode
- 'direx
- 'dockerfile-mode
- 'e2wm
- 'emmet-mode
- 'flycheck
- 'flycheck-package
- 'flycheck-color-mode-line
- 'go-mode
- 'groovy-mode
- 'hcl-mode
- 'helm
- 'helm-gtags
- 'helm-projectile
- 'helm-swoop
- 'js2-mode
- 'json-mode
- 'magit
- 'markdown-mode
- 'multi-web-mode
- 'org
- 'package+
- 'php-eldoc
- 'php-mode
- 'popwin
- 'protobuf-mode
- 'scss-mode
- 'theme-darktooth
- 'tumblesocks
- 'web-mode
- 'yagist
- 'yaml-mode
- )
 
-
-;; Server
-(when (require 'server nil t)
-  (unless (server-running-p) (server-start)))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(use-package ace-jump-mode
+  :bind (("C-c SPC" . ace-jump-mode))
+  :ensure t)
+
+(use-package ace-window
+  :bind (("M-p" . ace-window))
+  :ensure t)
+
+(use-package auto-complete
+  :init (ac-config-default)
+  :ensure t)
+
+(use-package auto-save-buffers-enhanced
+  :init (auto-save-buffers-enhanced t)
+  :ensure t)
+
+(use-package bm
+  :bind (("M-1" . bm-toggle)
+         ("M-2" . bm-previous)
+         ("M-3" . bm-next))
+  :ensure t)
+
+(use-package coffee-mode
+  :ensure t)
+
+(use-package crontab-mode
+  :ensure t)
+
+(use-package direx
+  :bind (("C-x C-j" . direx:jump-to-directory-other-window))
+  :ensure t)
+
+(use-package dockerfile-mode
+  :ensure t)
+
+(use-package e2wm
+  :ensure t)
+
+(use-package emmet-mode
+  :ensure t)
+
+(use-package flycheck
+  :ensure t)
+
+(use-package flycheck-package
+  :ensure t)
+
+(use-package flycheck-color-mode-line
+  :ensure t)
+
+(use-package go-mode
+  :ensure t)
+
+;; (use-package groovy-mode
+;;   :ensure t)
+
+;; (use-package hcl-mode
+;;   :ensure t)
+
+(use-package helm
+  :init (helm-mode 1)
+  :bind (("M-x" . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-s" . helm-occur)
+         ("C-x ;" . helm-mini)
+         ("C-x b" . helm-buffers-list))
+  :ensure t)
+
+(use-package helm-gtags
+  :ensure t)
+
+(use-package helm-projectile
+  :ensure t)
+
+(use-package helm-swoop
+  :ensure t)
+
+(use-package js2-mode
+  :mode "\\.js\\'"
+  :ensure t)
+
+(use-package json-mode
+  :ensure t)
+
+(use-package magit
+  :ensure t)
+
+(use-package markdown-mode
+  :ensure t)
+
+(use-package multi-web-mode
+  :ensure t)
+
+(use-package org
+  :ensure t)
+
+(use-package php-eldoc
+  :ensure t)
+
+(use-package php-mode
+  :ensure t)
+
+(use-package popwin
+  :init (popwin-mode 1)
+  (push '(direx:direx-mode :position left :width 50 :dedicated t)
+        popwin:special-display-config)
+  :ensure t)
+
+(use-package protobuf-mode
+  :ensure t)
+
+(use-package scss-mode
+  :ensure t)
+
+(use-package tumblesocks
+  :init (setq oauth-nonce-function 'oauth-internal-make-nonce)
+  :ensure t)
+
+(use-package web-mode
+  :ensure t)
+
+(use-package yagist
+  :ensure t)
+
+(use-package yaml-mode
+  :ensure t)
 
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
 
-
-(prefer-coding-system 'utf-8)
-(setq system-time-locale "C")
-(defalias 'yes-or-no-p 'y-or-n-p)
-(setq-default indent-tabs-mode nil)
-
+;;
 (defun xcezx/make-scratch-buffer (&optional arg)
+  "ARG is boolean."
   (set-buffer (get-buffer-create "*scratch*"))
   (funcall initial-major-mode)
   (erase-buffer)
@@ -116,8 +202,6 @@
 (define-key global-map (kbd "C-x C-b") 'electric-buffer-list)
 (define-key global-map (kbd "C-x C-d") 'dired-jump-other-window)
 (define-key global-map (kbd "C-x p") (lambda () (interactive) (other-window -1)))
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(define-key global-map (kbd "M-p") 'ace-window)
 (define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)
 
 (defadvice move-beginning-of-line (around adviced-beginning-of-line (arg) activate)
@@ -145,34 +229,9 @@
 (when (require 'wdired nil t)
   (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode))
 
-;; 
-(ac-config-default)
-
-(auto-save-buffers-enhanced t)
-
-(helm-mode 1)
-(define-key global-map (kbd "M-x") 'helm-M-x)
-(define-key global-map (kbd "C-x C-f") 'helm-find-files)
-(define-key global-map (kbd "C-s") 'helm-occur)
-(define-key global-map (kbd "C-x ;") 'helm-mini)
-(define-key global-map (kbd "C-x b") 'helm-buffers-list)
-
-(defun xcezx/helm-gtags-mode-hook ()
-  (define-key helm-gtags-mode-map (kbd "C-x g") 'helm-gtags-select))
-(add-hook 'helm-gtags-mode-hook 'xcezx/helm-gtags-mode-hook)
-
-(define-key global-map (kbd "M-1") 'bm-toggle)
-(define-key global-map (kbd "M-2") 'bm-previous)
-(define-key global-map (kbd "M-3") 'bm-next)
-
-(when (require 'popwin nil t)
-  (popwin-mode 1)
-  (push '(direx:direx-mode :position left :width 50 :dedicated t)
-        popwin:special-display-config))
-(define-key global-map (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
-
-(when (require 'js2-mode nil t)
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+;; (defun xcezx/helm-gtags-mode-hook ()
+;;   (define-key helm-gtags-mode-map (kbd "C-x g") 'helm-gtags-select))
+;; (add-hook 'helm-gtags-mode-hook 'xcezx/helm-gtags-mode-hook)
 
 ;;; @FIXME
 (add-hook 'makefile-mode-hook
@@ -184,9 +243,4 @@
   (remove-hook 'before-save-hook 'delete-trailing-whitespace t))
 (advice-add 'php-enable-psr2-coding-style :around #'xcezx/php-enable-psr2-coding-style)
 
-;;; for tumblesocks
-(when (require 'tumblesocks nil t)
-  (setq oauth-nonce-function 'oauth-internal-make-nonce))
-
-
-;;; init.el ends here
+;;; init.el ends here.
