@@ -56,7 +56,7 @@
      (css-mode "<style[^>]*>" "</style>"))))
  '(package-selected-packages
    (quote
-    (use-package theme-darktooth yaml-mode yagist web-mode tumblesocks scss-mode protobuf-mode popwin php-mode php-eldoc package+ multi-web-mode magit json-mode js2-mode helm-swoop helm-projectile helm-gtags hcl-mode groovy-mode go-mode flycheck-package flycheck-color-mode-line emmet-mode e2wm dockerfile-mode direx crontab-mode coffee-mode bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode)))
+    (use-package yaml-mode yagist web-mode tumblesocks scss-mode protobuf-mode popwin php-mode php-eldoc package+ multi-web-mode magit json-mode js2-mode helm-swoop helm-projectile helm-gtags hcl-mode groovy-mode go-mode flycheck-package flycheck-color-mode-line emmet-mode e2wm dockerfile-mode direx crontab-mode coffee-mode bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode)))
  '(php-mode-coding-style (quote psr2))
  '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode flycheck-mode)))
  '(projectile-completion-system (quote helm))
