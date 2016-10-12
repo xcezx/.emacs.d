@@ -73,7 +73,8 @@
 (use-package helm-gtags
   :bind (:map helm-gtags-mode-map ("C-x g" . helm-gtags-select)))
 
-(use-package helm-projectile)
+(use-package helm-projectile
+  :init (projectile-mode))
 
 (use-package helm-swoop)
 
