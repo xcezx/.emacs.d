@@ -89,4 +89,4 @@
  '(helm-selection ((t (:background "brightred" :underline t))))
  '(magit-diff-added-highlight ((t (:inherit diff-added))))
  '(magit-diff-removed-highlight ((t (:inherit diff-removed))))
- '(mode-line ((t (:background "cyan" :foreground "green")))))
+ '(mode-line ((t (:background "black" :foreground "red")))))
