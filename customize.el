@@ -75,7 +75,8 @@
  '(tumblesocks-blog "xcezx-log.tumblr.com")
  '(tumblesocks-post-default-state "ask")
  '(tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token")
- '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
+ '(yaml-mode-hook (quote (yaml-set-imenu-generic-expression))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

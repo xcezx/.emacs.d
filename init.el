@@ -112,7 +112,12 @@
   :ensure t)
 
 (use-package origami
-  :ensure t)
+  :ensure t
+  :bind (("C-c h c" . origami-toggle-node)
+         ("C-c h h" . origami-close-node)
+         ("C-c h s" . origami-open-node)
+         ("C-c h H" . origami-close-all-nodes)
+         ("C-c h S" . origami-open-all-nodes)))
 
 (use-package php-eldoc
   :ensure t)
