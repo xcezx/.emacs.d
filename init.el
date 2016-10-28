@@ -111,6 +111,9 @@
 (use-package org
   :ensure t)
 
+(use-package origami
+  :ensure t)
+
 (use-package php-eldoc
   :ensure t)
 
