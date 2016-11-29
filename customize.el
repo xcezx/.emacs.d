@@ -72,6 +72,7 @@
  '(show-trailing-whitespace t)
  '(size-indication-mode t)
  '(split-width-threshold nil)
+ '(tool-bar-mode nil)
  '(tumblesocks-blog "xcezx-log.tumblr.com")
  '(tumblesocks-post-default-state "ask")
  '(tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token")
