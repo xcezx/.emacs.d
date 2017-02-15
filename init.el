@@ -152,6 +152,9 @@
 (use-package yaml-mode
   :ensure t)
 
+(use-package git-timemachine
+  :ensure t)
+
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
