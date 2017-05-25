@@ -119,6 +119,11 @@
          ("C-c h H" . origami-close-all-nodes)
          ("C-c h S" . origami-open-all-nodes)))
 
+(use-package plantuml-mode
+  :ensure t
+  :init
+  (setq plantuml-jar-path "~/bin/plantuml.jar"))
+
 (use-package php-eldoc
   :ensure t)
 
