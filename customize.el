@@ -54,6 +54,9 @@
     ((php-mode "<\\?php\\|<\\?=" "\\?>")
      (js-mode "<script[^>]*>" "</script>")
      (css-mode "<style[^>]*>" "</style>"))))
+ '(package-selected-packages
+   (quote
+    (git-timemachine yaml-mode yagist web-mode tumblesocks scss-mode protobuf-mode popwin php-mode php-eldoc plantuml-mode origami multi-web-mode markdown-mode magit json-mode js2-mode helm-swoop helm-projectile helm-gtags helm go-mode flycheck-color-mode-line flycheck-package flycheck emmet-mode e2wm dockerfile-mode direx crontab-mode coffee-mode bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode use-package)))
  '(php-mode-coding-style (quote psr2))
  '(php-mode-hook (quote (helm-gtags-mode hs-minor-mode flycheck-mode)))
  '(projectile-completion-system (quote helm))
