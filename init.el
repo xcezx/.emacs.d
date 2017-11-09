@@ -248,9 +248,9 @@
           (function (lambda ()
                       (fset 'makefile-warn-suspicious-lines 'ignore))))
 
-(defun xcezx/php-enable-psr2-coding-style (f &rest args)
+(defun xcezx/php-set-style (f &rest args)
   (apply f args)
   (remove-hook 'before-save-hook 'delete-trailing-whitespace t))
-(advice-add 'php-enable-psr2-coding-style :around #'xcezx/php-enable-psr2-coding-style)
+(advice-add 'php-set-style :around #'xcezx/php-set-style)
 
 ;;; init.el ends here.
