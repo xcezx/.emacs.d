@@ -22,7 +22,8 @@
 
 (use-package ace-jump-mode
   :ensure t
-  :bind (("C-c SPC" . ace-jump-mode)))
+  :bind (("C-c SPC" . ace-jump-mode))
+  :custom-face (ace-jump-face-background ((t (:foreground "brightcyan")))))
 
 (use-package ace-window
   :ensure t
@@ -40,10 +41,8 @@
   :ensure t
   :bind (("M-1" . bm-toggle)
          ("M-2" . bm-previous)
-         ("M-3" . bm-next)))
-
-(use-package coffee-mode
-  :ensure t)
+         ("M-3" . bm-next))
+  :custom-face (bm-face ((t (:background "green" :foreground "black")))))
 
 (use-package crontab-mode
   :ensure t)
@@ -62,13 +61,20 @@
   :ensure t)
 
 (use-package flycheck
-  :ensure t)
+  :ensure t
+  :hook ((dockerfile-mode go-mode php-mode) . flycheck-mode)
+  :custom
+  (flycheck-emacs-lisp-load-path 'inherit)
+  (flycheck-php-phpcs-executable "~/bin/phpcs.phar")
+  (flycheck-phpcs-standard "PSR2"))
 
 (use-package flycheck-package
   :ensure t)
 
 (use-package flycheck-color-mode-line
-  :ensure t)
+  :ensure t
+  :hook ((flycheck-mode) . flycheck-color-mode-line-mode)
+  :custom-face (flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "red" :foreground "yellow" :weight normal)))))
 
 (use-package go-mode
   :ensure t)
@@ -80,15 +86,21 @@
          ("C-x C-f" . helm-find-files)
          ("C-s" . helm-occur)
          ("C-x ;" . helm-mini)
-         ("C-x b" . helm-buffers-list)))
+         ("C-x b" . helm-buffers-list))
+  :custom (helm-buffer-max-length 64)
+  :custom-face (helm-selection ((t (:background "brightyellow" :foreground "black" :underline t)))))
 
 (use-package helm-gtags
   :ensure t
-  :bind (:map helm-gtags-mode-map ("C-x g" . helm-gtags-select)))
+  :bind (:map helm-gtags-mode-map ("C-x g" . helm-gtags-select))
+  :hook ((php-mode) . helm-gtags-mode))
 
 (use-package helm-projectile
   :ensure t
-  :init (projectile-mode))
+  :init (projectile-mode)
+  :custom
+  (projectile-completion-system 'helm)
+  (projectile-global-mode t))
 
 (use-package helm-swoop
   :ensure t)
@@ -101,13 +113,24 @@
   :ensure t)
 
 (use-package magit
-  :ensure t)
+  :ensure t
+  :custom (magit-auto-revert-mode nil)
+  :custom-face
+  (magit-diff-added-highlight ((t (:inherit diff-added))))
+  (magit-diff-removed-highlight ((t (:inherit diff-removed)))))
 
 (use-package markdown-mode
   :ensure t)
 
 (use-package multi-web-mode
-  :ensure t)
+  :ensure t
+  :custom
+  (mweb-default-major-mode 'html-mode)
+  (mweb-filename-extensions '("html" "twig" "tpl" "erb"))
+  (mweb-submode-indent-offset 4)
+  (mweb-tags '((php-mode "<\\?php\\|<\\?=" "\\?>")
+               (js-mode "<script[^>]*>" "</script>")
+               (css-mode "<style[^>]*>" "</style>"))))
 
 (use-package org
   :ensure t)
@@ -122,8 +145,7 @@
 
 (use-package plantuml-mode
   :ensure t
-  :init
-  (setq plantuml-jar-path "~/bin/plantuml.jar"))
+  :custom (plantuml-jar-path "~/bin/plantuml.jar"))
 
 (use-package php-eldoc
   :ensure t)
@@ -131,12 +153,12 @@
 (use-package php-mode
   :ensure t
   :pin melpa-stable
-  :init
-  (setq php-mode-coding-style 'psr2))
+  :custom (php-mode-coding-style 'psr2))
 
 (use-package popwin
   :ensure t
-  :config (popwin-mode 1)
+  :config
+  (popwin-mode 1)
   (push '(direx:direx-mode :position left :width 50 :dedicated t)
         popwin:special-display-config))
 
@@ -148,7 +170,11 @@
 
 (use-package tumblesocks
   :ensure t
-  :init (setq oauth-nonce-function 'oauth-internal-make-nonce))
+  :init (setq oauth-nonce-function 'oauth-internal-make-nonce)
+  :custom
+  (tumblesocks-blog "xcezx-log.tumblr.com")
+  (tumblesocks-post-default-state "ask")
+  (tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token"))
 
 (use-package web-mode
   :ensure t)
@@ -254,5 +280,3 @@
   (apply f args)
   (remove-hook 'before-save-hook 'delete-trailing-whitespace t))
 (advice-add 'php-set-style :around #'xcezx/php-set-style)
-
-;;; init.el ends here.
