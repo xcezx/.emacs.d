@@ -12,6 +12,7 @@
 (setq package-user-dir (locate-user-emacs-file "vendor")
       package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
@@ -129,6 +130,7 @@
 
 (use-package php-mode
   :ensure t
+  :pin melpa-stable
   :init
   (setq php-mode-coding-style 'psr2))
 
