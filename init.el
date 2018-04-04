@@ -20,6 +20,7 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+;; Packages
 (use-package ace-jump-mode
   :ensure t
   :bind (("C-c SPC" . ace-jump-mode))
