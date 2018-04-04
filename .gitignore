@@ -1,9 +1,9 @@
+*~
 /auto-save-list/
 /vendor/
 ac-comphist.dat
-tramp
-projectile.cache
-projectile-bookmarks.eld
 helm-adaptive-history
+projectile-bookmarks.eld
+projectile.cache
 recentf
-*~
+tramp
