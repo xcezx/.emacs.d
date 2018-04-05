@@ -63,7 +63,7 @@
 
 (use-package flycheck
   :ensure t
-  :hook ((dockerfile-mode go-mode php-mode) . flycheck-mode)
+  :hook ((dockerfile-mode go-mode php-mode protobuf-mode) . flycheck-mode)
   :custom
   (flycheck-emacs-lisp-load-path 'inherit)
   (flycheck-php-phpcs-executable "~/bin/phpcs.phar")
