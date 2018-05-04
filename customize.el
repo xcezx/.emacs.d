@@ -22,7 +22,6 @@
  '(dired-use-ls-dired nil)
  '(electric-pair-mode t)
  '(electric-pair-pairs (quote ((34 . 34))))
- '(emacs-lisp-mode-hook (quote (turn-on-eldoc-mode)))
  '(global-auto-revert-mode t)
  '(history-delete-duplicates t)
  '(html-mode-hook (quote (emmet-mode)))
