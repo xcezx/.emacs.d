@@ -189,6 +189,17 @@
 (use-package git-timemachine
   :ensure t)
 
+(use-package hideshow
+  :ensure t
+  :hook ((go-mode php-mode) . hs-minor-mode)
+  :bind (:map hs-minor-mode-map
+              ("C-c h c" . hs-toggle-hiding)
+              ("C-c h h" . hs-hide-block)
+              ("C-c h s" . hs-show-block)
+              ("C-c h H" . hs-hide-all)
+              ("C-c h S" . hs-show-all)
+              ("C-c h l" . hs-hide-level)))
+
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
@@ -260,14 +271,6 @@
 (defadvice after-find-file (before adviced-after-find-file activate)
   "Make the directory containing the visited file."
   (make-directory (file-name-directory (buffer-file-name)) t))
-
-(defun xcezx/hs-config ()
-  (define-key hs-minor-mode-map (kbd "C-c h c") 'hs-toggle-hiding)
-  (define-key hs-minor-mode-map (kbd "C-c h h") 'hs-hide-block)
-  (define-key hs-minor-mode-map (kbd "C-c h s") 'hs-show-block)
-  (define-key hs-minor-mode-map (kbd "C-c h H") 'hs-hide-all)
-  (define-key hs-minor-mode-map (kbd "C-c h S") 'hs-show-all)
-  (define-key hs-minor-mode-map (kbd "C-c h l") 'hs-hide-level))
 
 (when (require 'wdired nil t)
   (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode))
