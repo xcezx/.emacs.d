@@ -109,9 +109,8 @@
 (use-package helm-swoop
   :ensure t)
 
-(use-package js2-mode
-  :ensure t
-  :mode "\\.js\\'")
+(use-package js3-mode
+  :ensure t)
 
 (use-package json-mode
   :ensure t)
