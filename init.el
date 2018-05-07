@@ -65,9 +65,12 @@
   :ensure t
   :hook ((dockerfile-mode go-mode php-mode protobuf-mode) . flycheck-mode)
   :custom
-  (flycheck-emacs-lisp-load-path 'inherit)
-  (flycheck-php-phpcs-executable "~/bin/phpcs.phar")
-  (flycheck-phpcs-standard "PSR2"))
+  (flycheck-php-phpmd-executable "~/bin/phpmd.phar")
+  (flycheck-phpmd-rulesets '("unusedcode"))
+  ;; (flycheck-phpmd-rulesets '("codesize" "design" "naming" "unusedcode"))
+  ;; (flycheck-php-phpcs-executable "~/bin/phpcs.phar")
+  ;; (flycheck-phpcs-standard "PSR2")
+  (flycheck-emacs-lisp-load-path 'inherit))
 
 (use-package flycheck-package
   :ensure t)
