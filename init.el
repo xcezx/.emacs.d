@@ -11,7 +11,6 @@
 ;; Package
 (setq package-user-dir (locate-user-emacs-file "vendor")
       package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
@@ -44,9 +43,6 @@
          ("M-2" . bm-previous)
          ("M-3" . bm-next))
   :custom-face (bm-face ((t (:background "green" :foreground "black")))))
-
-(use-package crontab-mode
-  :ensure t)
 
 (use-package direx
   :ensure t
