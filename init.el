@@ -196,6 +196,9 @@
               ("C-c h S" . hs-show-all)
               ("C-c h l" . hs-hide-level)))
 
+(use-package terraform-mode
+  :ensure t)
+
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
