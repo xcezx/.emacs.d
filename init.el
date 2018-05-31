@@ -30,9 +30,25 @@
   :ensure t
   :bind (("M-p" . ace-window)))
 
-(use-package auto-complete
+;; (use-package auto-complete
+;;   :ensure t
+;;   :init (ac-config-default))
+
+(use-package company
   :ensure t
-  :init (ac-config-default))
+  :init (global-company-mode)
+  :bind (:map company-search-map
+              ("C-n" . company-select-next)
+              ("C-p" . company-select-previous))
+  :bind (:map company-active-map
+              ("C-n" . company-select-next)
+              ("C-p" . company-select-previous)
+              ("C-s" . company-filter-candidates)))
+
+(use-package company-php
+  :ensure t
+  :after php-mode
+  :config (add-to-list 'company-backends 'company-ac-php-backend))
 
 (use-package auto-save-buffers-enhanced
   :ensure t
