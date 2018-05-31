@@ -29,9 +29,8 @@
   :ensure t
   :bind (("M-p" . ace-window)))
 
-(use-package auto-complete
-  :ensure t
-  :init (ac-config-default))
+(use-package company
+  :ensure t)
 
 (use-package auto-save-buffers-enhanced
   :ensure t
