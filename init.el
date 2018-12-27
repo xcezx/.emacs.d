@@ -213,6 +213,9 @@
 (use-package terraform-mode
   :ensure t)
 
+(use-package editorconfig
+  :ensure t)
+
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
