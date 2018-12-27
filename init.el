@@ -76,7 +76,9 @@
 (use-package flycheck
   :ensure t
   :hook ((dockerfile-mode go-mode php-mode protobuf-mode) . flycheck-mode)
-  :custom (flycheck-emacs-lisp-load-path 'inherit))
+  :custom
+  (flycheck-emacs-lisp-load-path 'inherit)
+  (flycheck-disabled-checkers '(php-phpmd php-phpcs)))
 
 (use-package flycheck-package
   :ensure t)
