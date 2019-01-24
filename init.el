@@ -117,7 +117,7 @@
 (use-package helm-swoop
   :ensure t)
 
-(use-package js3-mode
+(use-package js2-mode
   :ensure t)
 
 (use-package json-mode

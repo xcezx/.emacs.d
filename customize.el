@@ -48,7 +48,7 @@
      (css-mode "<style[^>]*>" "</style>"))))
  '(package-selected-packages
    (quote
-    (editorconfig yaml-mode yagist web-mode use-package tumblesocks terraform-mode smartparens scss-mode protobuf-mode popwin plantuml-mode php-eldoc perspective origami multi-web-mode magit json-mode js3-mode helm-swoop helm-projectile helm-gtags go-mode git-timemachine flycheck-package flycheck-color-mode-line emmet-mode e2wm dockerfile-mode direx crontab-mode company-php bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode)))
+    (js2-mode editorconfig yaml-mode yagist web-mode use-package tumblesocks terraform-mode smartparens scss-mode protobuf-mode popwin plantuml-mode php-eldoc perspective origami multi-web-mode magit json-mode helm-swoop helm-projectile helm-gtags go-mode git-timemachine flycheck-package flycheck-color-mode-line emmet-mode e2wm dockerfile-mode direx crontab-mode company-php bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode)))
  '(php-mode-coding-style (quote psr2))
  '(plantuml-jar-path "~/bin/plantuml.jar")
  '(projectile-completion-system (quote helm))
