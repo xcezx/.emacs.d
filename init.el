@@ -176,6 +176,9 @@
 (use-package protobuf-mode
   :ensure t)
 
+(use-package rjsx-mode
+  :ensure t)
+
 (use-package scss-mode
   :ensure t)
 
@@ -186,6 +189,9 @@
   (tumblesocks-blog "xcezx-log.tumblr.com")
   (tumblesocks-post-default-state "ask")
   (tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token"))
+
+(use-package typescript-mode
+  :ensure t)
 
 (use-package web-mode
   :ensure t)
