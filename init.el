@@ -222,6 +222,10 @@
 (use-package editorconfig
   :ensure t)
 
+(use-package direnv
+  :ensure t
+  :config (direnv-mode))
+
 ;; Customize
 (setq custom-file (locate-user-emacs-file "customize.el"))
 (load custom-file t)
