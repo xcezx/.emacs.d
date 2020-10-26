@@ -3,31 +3,28 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ad-redefinition-action (quote accept))
- '(after-save-hook
-   (quote
-    (executable-make-buffer-file-executable-if-script-p)))
+ '(ad-redefinition-action 'accept)
+ '(after-save-hook '(executable-make-buffer-file-executable-if-script-p))
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(column-number-mode t)
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes '(wombat))
  '(custom-safe-themes
-   (quote
-    ("a507b9ca4a605d5256716da70961741b9ef9ec3246041a4eb776102e8df18418" default)))
+   '("a507b9ca4a605d5256716da70961741b9ef9ec3246041a4eb776102e8df18418" default))
  '(delete-selection-mode t)
  '(delete-trailing-lines t)
  '(dired-dwim-target t)
  '(dired-isearch-filenames t)
- '(dired-recursive-copies (quote always))
+ '(dired-recursive-copies 'always)
  '(dired-use-ls-dired nil)
  '(electric-pair-mode t)
- '(electric-pair-pairs (quote ((34 . 34))))
- '(flycheck-disabled-checkers (quote (php-phpmd php-phpcs)))
- '(flycheck-emacs-lisp-load-path (quote inherit))
+ '(electric-pair-pairs '((34 . 34)))
+ '(flycheck-disabled-checkers '(php-phpmd php-phpcs))
+ '(flycheck-emacs-lisp-load-path 'inherit)
  '(global-auto-revert-mode t)
  '(helm-buffer-max-length 64)
  '(history-delete-duplicates t)
- '(html-mode-hook (quote (emmet-mode)))
+ '(html-mode-hook '(emmet-mode))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice t)
@@ -38,28 +35,26 @@
  '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(multi-web-global-mode t nil (multi-web-mode))
- '(mweb-default-major-mode (quote html-mode))
- '(mweb-filename-extensions (quote ("html" "twig" "tpl" "erb")))
+ '(mweb-default-major-mode 'html-mode)
+ '(mweb-filename-extensions '("html" "twig" "tpl" "erb"))
  '(mweb-submode-indent-offset 4)
  '(mweb-tags
-   (quote
-    ((php-mode "<\\?php\\|<\\?=" "\\?>")
+   '((php-mode "<\\?php\\|<\\?=" "\\?>")
      (js-mode "<script[^>]*>" "</script>")
-     (css-mode "<style[^>]*>" "</style>"))))
+     (css-mode "<style[^>]*>" "</style>")))
  '(package-selected-packages
-   (quote
-    (yaml-mode yagist web-mode use-package typescript-mode tumblesocks terraform-mode smartparens scss-mode rjsx-mode protobuf-mode popwin plantuml-mode php-eldoc perspective origami multi-web-mode magit json-mode helm-swoop helm-projectile helm-gtags go-mode git-timemachine flycheck-package flycheck-color-mode-line emmet-mode editorconfig e2wm dockerfile-mode direx crontab-mode company-php bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode)))
- '(php-mode-coding-style (quote psr2))
+   '(yaml-mode yagist web-mode use-package typescript-mode tumblesocks terraform-mode smartparens scss-mode rjsx-mode protobuf-mode popwin plantuml-mode php-eldoc perspective origami multi-web-mode magit json-mode helm-swoop helm-projectile helm-gtags go-mode git-timemachine flycheck-package flycheck-color-mode-line emmet-mode editorconfig e2wm dockerfile-mode direx crontab-mode company-php bm auto-save-buffers-enhanced auto-complete ace-window ace-jump-mode))
+ '(php-mode-coding-style 'psr2)
  '(plantuml-jar-path "~/bin/plantuml.jar")
- '(projectile-completion-system (quote helm))
+ '(projectile-completion-system 'helm)
  '(projectile-global-mode t t)
  '(read-buffer-completion-ignore-case t)
  '(recentf-mode t)
  '(ruby-deep-indent-paren-style nil)
- '(safe-local-variable-values (quote ((py-indent-offset . 4))))
+ '(safe-local-variable-values '((py-indent-offset . 4)))
  '(scroll-bar-mode nil)
  '(sgml-basic-offset 2)
- '(sgml-mode-hook (quote (emmet-mode)))
+ '(sgml-mode-hook '(emmet-mode))
  '(show-paren-mode t)
  '(show-trailing-whitespace t)
  '(size-indication-mode t)
@@ -68,8 +63,8 @@
  '(tumblesocks-blog "xcezx-log.tumblr.com")
  '(tumblesocks-post-default-state "ask")
  '(tumblesocks-token-file "~/Dropbox/Private/tumblr-oauth-token")
- '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
- '(yaml-mode-hook (quote (yaml-set-imenu-generic-expression origami-mode))))
+ '(uniquify-buffer-name-style 'post-forward-angle-brackets nil (uniquify))
+ '(yaml-mode-hook '(yaml-set-imenu-generic-expression origami-mode)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
