@@ -45,6 +45,15 @@
   :after php-mode
   :config (add-to-list 'company-backends 'company-ac-php-backend))
 
+(use-package counsel
+  :ensure t
+  :init (ivy-mode 1)
+  :bind (("C-s" . swiper-isearch))
+  :custom
+  (ivy-height 10)
+  (ivy-count-format "(%d/%d) ")
+  (ivy-use-virtual-buffers t))
+
 (use-package auto-save-buffers-enhanced
   :ensure t
   :init (auto-save-buffers-enhanced t))
@@ -85,32 +94,6 @@
   :custom-face (flycheck-color-mode-line-error-face ((t (:inherit flycheck-fringe-error :background "red" :foreground "yellow" :weight normal)))))
 
 (use-package go-mode
-  :ensure t)
-
-(use-package helm
-  :ensure t
-  :init (helm-mode 1)
-  :bind (("M-x" . helm-M-x)
-         ("C-x C-f" . helm-find-files)
-         ("C-s" . helm-occur)
-         ("C-x ;" . helm-mini)
-         ("C-x b" . helm-buffers-list))
-  :custom (helm-buffer-max-length 64)
-  :custom-face (helm-selection ((t (:background "brightyellow" :foreground "black" :underline t)))))
-
-(use-package helm-gtags
-  :ensure t
-  :bind (:map helm-gtags-mode-map ("C-x g" . helm-gtags-select))
-  :hook ((php-mode) . helm-gtags-mode))
-
-(use-package helm-projectile
-  :ensure t
-  :init (projectile-mode)
-  :custom
-  (projectile-completion-system 'helm)
-  (projectile-global-mode t))
-
-(use-package helm-swoop
   :ensure t)
 
 (use-package js2-mode
