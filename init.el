@@ -29,10 +29,6 @@
   :ensure t
   :bind (("M-p" . ace-window)))
 
-;; (use-package auto-complete
-;;   :ensure t
-;;   :init (ac-config-default))
-
 (use-package company
   :ensure t
   :init (global-company-mode)
