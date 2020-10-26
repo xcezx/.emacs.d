@@ -97,7 +97,8 @@
   :ensure t)
 
 (use-package js2-mode
-  :ensure t)
+  :ensure t
+  :mode "\\.js\\'")
 
 (use-package json-mode
   :ensure t)
