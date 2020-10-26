@@ -103,6 +103,10 @@
 (use-package json-mode
   :ensure t)
 
+(use-package lsp-mode
+  :ensure t
+  :commands lsp)
+
 (use-package magit
   :ensure t
   :custom (magit-auto-revert-mode nil)
